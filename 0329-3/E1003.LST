@@ -1,0 +1,63 @@
+Intel-8051 Macro Assembler - Version 1.00
+
+      1    0000                           	ORG	000H
+      2    0000     75 90 FE              LOOP:	MOV	P1,#11111110B
+      3    0003     30 A0 38              	JNB	P2.0,KEY0
+      4    0006     30 A1 3A              	JNB	P2.1,KEY1
+      5    0009     30 A2 3C              	JNB	P2.2,KEY2
+      6    000C     30 A3 3E              	JNB	P2.3,KEY3
+      7    000F                           	
+      8    000F     75 90 FD              	MOV	P1,#11111101B
+      9    0012     30 A0 3D              	JNB	P2.0,KEY4
+     10    0015     30 A1 3F              	JNB	P2.1,KEY5
+     11    0018     30 A2 41              	JNB	P2.2,KEY6
+     12    001B     30 A3 43              	JNB	P2.3,KEY7
+     13    001E                           
+     14    001E     75 90 FB              	MOV	P1,#11111011B
+     15    0021     30 A0 42              	JNB	P2.0,KEY8
+     16    0024     30 A1 44              	JNB	P2.1,KEY9
+     17    0027     30 A2 46              	JNB	P2.2,KEYA
+     18    002A     30 A3 48              	JNB	P2.3,KEYB
+     19    002D                           	
+     20    002D     75 90 F7              	MOV	P1,#11110111B
+     21    0030     30 A0 47              	JNB	P2.0,KEYC
+     22    0033     30 A1 49              	JNB	P2.1,KEYD
+     23    0036     30 A2 4B              	JNB	P2.2,KEYE
+     24    0039     30 A3 4D              	JNB	P2.3,KEYF
+     25    003C     01 00                 	AJMP	LOOP
+     26    003E                           
+     27    003E     75 80 00              KEY0:	MOV	P0,#00000000B
+     28    0041     01 00                 	AJMP	LOOP
+     29    0043     75 80 01              KEY1:	MOV	P0,#00000001B
+     30    0046     01 00                 	AJMP	LOOP
+     31    0048     75 80 02              KEY2:	MOV	P0,#00000010B
+     32    004B     01 00                 	AJMP	LOOP
+     33    004D     75 80 03              KEY3:	MOV	P0,#00000011B
+     34    0050     01 00                 	AJMP	LOOP
+     35    0052     75 80 04              KEY4:	MOV	P0,#00000100B
+     36    0055     01 00                 	AJMP	LOOP
+     37    0057     75 80 05              KEY5:	MOV	P0,#00000101B
+     38    005A     01 00                 	AJMP	LOOP
+     39    005C     75 80 06              KEY6:	MOV	P0,#00000110B
+     40    005F     01 00                 	AJMP	LOOP
+     41    0061     75 80 07              KEY7:	MOV	P0,#00000111B
+     42    0064     01 00                 	AJMP	LOOP
+     43    0066     75 80 08              KEY8:	MOV	P0,#00001000B
+     44    0069     01 00                 	AJMP	LOOP
+     45    006B     75 80 09              KEY9:	MOV	P0,#00001001B
+     46    006E     01 00                 	AJMP	LOOP
+     47    0070     75 80 0A              KEYA:	MOV	P0,#00001010B
+     48    0073     01 00                 	AJMP	LOOP
+     49    0075     75 80 0B              KEYB:	MOV	P0,#00001011B
+     50    0078     01 00                 	AJMP	LOOP
+     51    007A     75 80 0C              KEYC:	MOV	P0,#00001100B
+     52    007D     01 00                 	AJMP	LOOP
+     53    007F     75 80 0D              KEYD:	MOV	P0,#00001101B
+     54    0082     01 00                 	AJMP	LOOP
+     55    0084     75 80 0E              KEYE:	MOV	P0,#00001110B
+     56    0087     01 00                 	AJMP	LOOP
+     57    0089     75 80 0F              KEYF:	MOV	P0,#00001111B
+     58    008C     01 00                 	AJMP	LOOP
+     59    008E                           
+     60    008E                           
+     61    008E                           	END

@@ -1,0 +1,16 @@
+Intel-8051 Macro Assembler - Version 1.00
+
+      1    0000                           	 ORG	0000H
+      2    0000     30 A0 08              LOOP: JNB	P2.0,CASE1;
+      3    0003     30 A1 0A              	JNB	P2.1,CASE2;
+      4    0006     30 A2 0C              	JNB	P2.2,CASE3;
+      5    0009     01 00                 	AJMP	LOOP
+      6    000B     75 80 0F              CASE1: MOV	P0,#00001111B;
+      7    000E     01 00                 	AJMP	LOOP	;
+      8    0010     75 80 F0              CASE2: MOV	P0,#11110000B;
+      9    0013     01 00                 	AJMP	LOOP	;
+     10    0015     75 80 FF              CASE3: MOV	P0,#11111111B;
+     11    0018     01 00                 	AJMP	LOOP	;
+     12    001A                           ;
+     13    001A                           	END
+     14    001A                           
